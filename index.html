@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for my guggii 💗</title>
+    <style>
+        body { margin: 0; font-family: 'georgia', serif; background: #fffcfc; color: #7d414f; overflow-x: hidden; scroll-behavior: smooth; text-transform: lowercase; }
+        .lock-screen, .content { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 50px 20px; }
+        .content { display: none; }
+        h1 { font-size: 2rem; color: #ff748c; letter-spacing: 1px; }
+        p { font-size: 1.1rem; line-height: 1.8; max-width: 450px; margin: 15px 0; }
+        .shayari { font-style: italic; font-size: 1.2rem; margin: 20px 0; color: #d90429; }
+        .btn-container { display: flex; flex-direction: column; gap: 15px; align-items: center; }
+        .btn-start, .btn-next-song { 
+            background: #ffb3c1; color: white; border: none; 
+            padding: 15px 35px; border-radius: 30px; cursor: pointer; 
+            font-size: 1.1rem; box-shadow: 0 4px 15px rgba(255, 179, 193, 0.4); 
+            transition: 0.3s; 
+        }
+        .btn-next-song { background: #ff8fa3; animation: pulse 2s infinite; }
+        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.05); } 100% { transform: scale(1); } }
+        .kitkat { color: #d90429; font-weight: bold; }
+        .emoji-rain { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: -1; }
+        @keyframes fall { 0% { transform: translateY(-10vh) rotate(0deg); opacity: 1; } 100% { transform: translateY(100vh) rotate(360deg); opacity: 0; } }
+        .falling-emoji { position: absolute; animation: fall 6s linear infinite; }
+        .lock-screen { background: #fdedec; color: #d90429; }
+        .lock-screen input { padding: 12px 20px; border-radius: 30px; border: 1px solid #ffb3c1; outline: none; width: 80%; max-width: 280px; margin: 10px 0; font-size: 1.1rem; }
+    </style>
+</head>
+<body>
+    <!-- 🔐 Lock Screen -->
+    <div class="lock-screen" id="lock">
+        <h1>secured for guggii 💗</h1>
+        <p>is page ko sirf meri guggii hi kholti hai… 🤭</p>
+        <p>password dalo:</p>
+        <input type="password" id="passwordInput" placeholder="yahan password dalo…" />
+        <button class="btn-start" onclick="checkPassword()">open the magic 🪄</button>
+    </div>
+
+    <!-- 🌸 Actual Content (visible only after password) -->
+    <div class="content" id="content">
+        <div class="emoji-rain" id="rain"></div>
+
+        <section>
+            <h1>hello meri guggii 💗</h1>
+            <p>aaj ka din bohot special hai... pata hai kyun? 👀</p>
+            <p>kyunki aaj sirf tumhare लिए लिखे गए मेरे दिल के शब्द आख़िरकार तुम्हें दिखने वाले हैं... 🌍</p>
+            <p>hamesha se sochta hoon, tum jaise insaan se pyaar karna mera sabse ख़ास नसीब hai… 💗🫶🏻</p>
+            <button class="btn-start" onclick="document.querySelector('section:nth-of-type(2)').scrollIntoView({ behavior: 'smooth' })">continue the story 📖</button>
+        </section>
+
+        <section>
+            <h1>meri wifeyyy 💍</h1>
+            <p>aapko wifey bolne mein jo sukoon hai na, wo kahin nahi 💗</p>
+            <p>aap meri sabkuch hain... meri duniya 🌍</p>
+            <p>aapko hamesha khush dekhna chahta hoon 🫂</p>
+            <p>jab bhi sochta hoon ki tum meri wife ho, dil mein ek अजीब‑सी दुआ बन जाती है – “भगवान, इसे हमेशा मेरे हाथ में रखना”… 💖</p>
+            <div class="shayari">
+                “दिल की धड़कन तुम्हारे नाम हो गई है,<br>
+                ज़िंदगी की हर सांस तुम्हारी तरफ़ बढ़ती है… 💗🫶🏻”
+            </div>
+        </section>
+
+        <section>
+            <p>दिल तो तेरा नाम लेता है, <br>और आँखें तेरे लिए ग़ज़ल बन जाती हैं…</p>
+            <p>तू जब मेरे पास बैठती है, तो लगता है जैसे सारे टेंशन चुपचाप भाग जाते हैं… 🌸</p>
+            <div class="shayari">
+                “जब तुम मुस्कुराती हो तो आसमान भी झुक जाता है,<br>
+                तेरी एक झलक पे दुनिया फ़िदा हो जाती है… 🌸💫”
+            </div>
+            <p>तेरी मुस्कान को अगर शायरी में बाँध दूँ,<br>
+                तो पूरी दुनिया तेरी तरफ़ देखने लगेगी…</p>
+        </section>
+
+        <section>
+            <h1>my kitkat 🍫</h1>
+            <p>aap meri <span class="kitkat">kitkat</span> hain 🤌🏻</p>
+            <p>thodi si crunchy, bohot saari sweet 💗</p>
+            <p>तू वो इंसान है जिसे देखकर दिल चुपके से मुस्कुरा लेता है, बस इतना सा भी काफ़ी है मेरे लिए… 🫂</p>
+            <div class="shayari">
+                “तुम्हारी आँखों में इतना जादू है,<br>
+                कि बस एक बार देख लूँ तो दिल भी तुम्हीं चुरा ले… 💖👁️”
+            </div>
+            <p>तू न जाने कितनी बार मेरा दिन बदल देती है, बस अपने एक प्यारे से message से… 💌</p>
+        </section>
+
+        <section>
+            <p>तू वो शिर्फ़ नहीं है जो हर दिन मिलती है,<br>
+                तू वो शब्द है जो मेरे दिल में हमेशा गुंजती है…</p>
+            <p>तेरे बिना रहना मुश्किल है, तेरे साथ रहना तो बस एक ख्वाब जैसा लगता है… 🌙</p>
+            <div class="shayari">
+                “तेरे बिना हर रात अधूरी है,<br>
+                तेरे साथ हर पल जन्नत जैसा लगता है… 🌙🫶🏻”
+            </div>
+            <p>तू वो गुलज़ार है मेरी ज़िंदगी में,<br>
+                जिसकी हर लाइन में ख़्वाब भरे होते हैं…</p>
+        </section>
+
+        <section>
+            <h1>i love you forever 💗</h1>
+            <p>hamesha mere saath rehna meri jaan 🌍🫂</p>
+            <p>hamesha... hamesha... hamesha 💘🫶🏻🌷</p>
+            <p>agar कभी दुनिया हमें अलग करने की कोशिश भी करे, तो मेरा दिल फिर भी बस तुम्हारा रहेगा… 💫</p>
+            <div class="shayari">
+                “हज़ारों रास्ते बदल जाएँ,<br>
+                लेकिन मेरा इश्क़ बस तुम्हारे नाम रहेगा…<br>
+                चाहे रात हो या सुबह, मेरी आँखें तुम्हीं ढूँढेंगी… 💫💗”
+            </div>
+        </section>
+    </div>
+
+    <script>
+        function checkPassword() {
+            const pw = document.getElementById("passwordInput").value;
+            const password = "guggupuggu";
+
+            if (pw === password) {
+                document.getElementById("lock").style.display = "none";
+                document.getElementById("content").style.display = "flex";
+                document.body.classList.remove("lock-screen");
+                document.body.style.background = "#fffcfc";
+            } else {
+                alert("Password गलत है, फिर से try karo 😊");
+            }
+        }
+
+        // Optional: Enter key to submit
+        document.getElementById("passwordInput").addEventListener("keypress", function(e) {
+            if (e.key === "Enter") checkPassword();
+        });
+
+        // Emoji Rain (only after unlock)
+        function makeEmoji() {
+            if (!document.getElementById("rain")) return;
+            const list = ['💗', '🫶🏻', '🌍', '🧿', '💘', '🌷', '🍫', '🫂', '💋', '🤌🏻', '🥺', '💖', '✨', '💫', '🌸'];
+            const e = document.createElement('div');
+            e.className = 'falling-emoji';
+            e.innerText = list[Math.floor(Math.random() * list.length)];
+            e.style.left = Math.random() * 100 + 'vw';
+            e.style.fontSize = Math.random() * 25 + 20 + 'px';
+            e.style.animationDuration = Math.random() * 2 + 4 + 's';
+            document.getElementById('rain').appendChild(e);
+            setTimeout(() => e.remove(), 6000);
+        }
+
+        // Start emoji rain after unlock
+        setInterval(() => {
+            if (document.getElementById("content").style.display === "flex") makeEmoji();
+        }, 350);
+    </script>
+</body>
+</html>
